@@ -25,12 +25,12 @@
     </section>
     <section id="contacto">
         <h2>Contacto</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu email" required>
-            <textarea placeholder="Tu mensaje" required></textarea>
+        <form id="contactForm" action="/submit" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
             <button type="submit">Enviar</button>
-        </form>
+        </form>        
     </section>
     <script src="funcionalidades.js"></script>
 </body>
