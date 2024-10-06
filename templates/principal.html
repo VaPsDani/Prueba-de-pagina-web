@@ -15,14 +15,23 @@
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyecto">
+            <h3>Proyecto 1</h3>
+            <p>Descripción del Proyecto 1.</p>
+        </div>
+        <div class="proyecto">
+            <h3>Proyecto 2</h3>
+            <p>Descripción del Proyecto 2.</p>
+        </div>
+    </section>
+    
     <section id="sobre">
         <h2>Sobre mí</h2>
         <p>Información sobre ti.</p>
     </section>
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <p>Detalles de tus proyectos.</p>
-    </section>
+    
     <section id="contacto">
         <h2>Contacto</h2>
         <form id="contactForm" action="{{ url_for('submit_form') }}" method="POST">

@@ -27,6 +27,11 @@ def submit_form():
     db.session.commit()
     return redirect(url_for('home'))
 
+@app.route('/mensajes')
+def listar_mensajes():
+    mensajes = Mensaje.query.all()
+    return render_template('mensajes.html', mensajes=mensajes)
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

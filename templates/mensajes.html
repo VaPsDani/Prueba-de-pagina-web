@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Recibidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mensajes Recibidos</h1>
+    </header>
+    <section id="mensajes">
+        {% for mensaje in mensajes %}
+        <div class="mensaje">
+            <h3>{{ mensaje.nombre }}</h3>
+            <p>{{ mensaje.email }}</p>
+            <p>{{ mensaje.mensaje }}</p>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
