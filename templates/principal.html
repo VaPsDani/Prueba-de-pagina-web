@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
     <header>
@@ -20,17 +20,17 @@
         <p>Información sobre ti.</p>
     </section>
     <section id="proyectos">
-        <h2>Proyectos</h></section>
+        <h2>Proyectos</h2>
+        <p>Detalles de tus proyectos.</p>
     </section>
     <section id="contacto">
         <h2>Contacto</h2>
-        <form id="contactForm" action="/submit" method="POST">
+        <form id="contactForm" action="{{ url_for('submit_form') }}" method="POST">
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu email" required>
             <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
             <button type="submit">Enviar</button>
-        </form>        
+        </form>
     </section>
-    <script src="funcionalidades.js"></script>
 </body>
 </html>
