@@ -22,9 +22,13 @@ def submit_form():
     email = request.form['email']
     mensaje = request.form['mensaje']
 
+    print(f"Datos recibidos: Nombre: {nombre}, Email: {email}, Mensaje: {mensaje}")
+
     nuevo_mensaje = Mensaje(nombre=nombre, email=email, mensaje=mensaje)
     db.session.add(nuevo_mensaje)
     db.session.commit()
+    
+    print("Nuevo mensaje guardado en la base de datos.")
     return redirect(url_for('home'))
 
 @app.route('/mensajes')
